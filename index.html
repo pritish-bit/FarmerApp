@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Farmer Assistant</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Upload Plant Image</h2>
+            <input type="file" id="plantImage" accept="image/*">
+            <button onclick="diagnosePlant()">Diagnose</button>
+            <p id="diagnosisResult"></p>
+        </section>
+        <section>
+            <h2>Enter Soil Data</h2>
+            <label for="pH">pH Level:</label>
+            <input type="number" id="pH" min="0" max="14">
+            <label for="moisture">Moisture (%):</label>
+            <input type="number" id="moisture" min="0" max="100">
+            <button onclick="getSuggestions()">Get Crop Suggestions</button>
+            <p id="suggestionsResult"></p>
+        </section>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>
